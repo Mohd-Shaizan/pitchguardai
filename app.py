@@ -149,7 +149,7 @@ with st.sidebar:
     st.markdown("### ⚾ PitchGuard AI")
     st.markdown("---")
     st.markdown('<p class="sidebar-label">Gemini API Key</p>', unsafe_allow_html=True)
-    api_key = st.text_input("", type="password", placeholder="AIza...", label_visibility="collapsed")
+    api_key = st.text_input("Gemini API Key", type="password", placeholder="AIza...", label_visibility="collapsed", key="gemini_api_key")
     st.markdown("---")
     st.markdown('<p class="sidebar-label">Analysis Settings</p>', unsafe_allow_html=True)
     max_frames = st.slider("Frames to Extract", min_value=6, max_value=20, value=10)
