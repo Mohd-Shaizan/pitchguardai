@@ -122,7 +122,7 @@ Be direct, clinical, use correct anatomical terminology."""
 
 def call_gemini(api_key: str, frames_b64: list) -> str:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.5-flash")
     parts = [{"inline_data": {"mime_type": "image/jpeg", "data": b}} for b in frames_b64]
     parts.append({"text": SYSTEM_PROMPT})
     response = model.generate_content(parts)
