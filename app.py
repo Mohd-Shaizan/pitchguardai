@@ -201,7 +201,7 @@ if uploaded:
                 cols = st.columns(min(5, len(annotated)))
                 for i, frame in enumerate(annotated):
                     with cols[i % len(cols)]:
-                        st.image(frame, use_container_width=True)
+                        st.image(frame, use_column_width=True)
                         st.markdown(f'<div class="frame-caption">Frame {i+1}</div>', unsafe_allow_html=True)
 
                 st.markdown("---")
